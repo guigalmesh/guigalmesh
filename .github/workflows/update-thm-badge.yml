@@ -1,0 +1,31 @@
+name: Update TryHackMe Badge
+
+# This tells GitHub to run the script every day at midnight UTC, 
+# and also allows you to run it manually from the Actions tab.
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Latest Badge
+        run: |
+          curl -o tryhackme-badge.png https://tryhackme-badges.s3.amazonaws.com/guigalmesh.png
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add tryhackme-badge.png
+          # The "|| exit 0" prevents the workflow from failing if your rank hasn't changed and there's nothing new to commit
+          git commit -m "chore: auto-update TryHackMe badge" || exit 0
+          git push

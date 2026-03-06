@@ -20,14 +20,7 @@ I'm an Information Systems student at UFSM with a passion for low-level programm
 
 ### 🏆 Cybersecurity Progress
 
-[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/guigalmesh.png)](https://tryhackme.com/p/guigalmesh)
-
-### 📊 GitHub Stats
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
+[![TryHackMe Badge](./tryhackme-badge.png)](https://tryhackme.com/p/guigalmesh)
 
 ### 📫 Let's Connect!
 

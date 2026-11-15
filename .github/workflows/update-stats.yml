@@ -1,6 +1,6 @@
 name: Update Stats Card
 
-# Rebuilds assets/stats.svg every day (and on demand from the Actions tab).
+# Rebuilds assets/cga/stats.png every day (and on demand from the Actions tab).
 on:
   schedule:
     - cron: '30 0 * * *'
@@ -16,16 +16,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: |
+          sudo apt-get install -y fonts-dejavu-core
+          pip install pillow numpy
+
       - name: Build stats card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/stats.py
+        run: python3 .github/scripts/cga_assets.py stats
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add assets/stats.svg
+          git add assets/cga/stats.png
           # Nothing to commit when the numbers didn't change
           git commit -m "chore: auto-update stats card" || exit 0
           git push

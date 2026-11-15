@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="900" height="250" role="img" aria-label="GitHub stats: 10 public repos, 1 stars, 304 contributions in the last year. Top languages: Python, Java, C, Assembly, Haskell, Other">
+  <defs>
+    <filter id="g" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity="0.45"/></pattern>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#06182e"/><stop offset="1" stop-color="#02040a"/></radialGradient>
+  </defs>
+  <rect width="900" height="250" rx="12" fill="url(#bg)"/>
+  <rect x="1" y="1" width="898" height="248" rx="11" fill="none" stroke="#2a86c4" stroke-opacity="0.45"/>
+  <g font-family="ui-monospace, 'SFMono-Regular', 'DejaVu Sans Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" filter="url(#g)" xml:space="preserve">
+    <text x="36" y="48" fill="#00e5ff" font-size="18" letter-spacing="3">SYSTEM DIAGNOSTICS</text>
+    <text x="864" y="48" fill="#2a86c4" text-anchor="end">user: guigalmesh</text>
+    <rect x="36" y="62" width="828" height="1" fill="#2a86c4" opacity="0.6"/>
+    <text x="36" y="100"><tspan fill="#2a86c4">&gt; public repos ............</tspan><tspan fill="#00e5ff"> 10</tspan></text><text x="36" y="134"><tspan fill="#2a86c4">&gt; stars earned ............</tspan><tspan fill="#00e5ff"> 1</tspan></text><text x="36" y="168"><tspan fill="#2a86c4">&gt; contribs / last year ....</tspan><tspan fill="#00e5ff"> 304</tspan></text><text x="36" y="202"><tspan fill="#2a86c4">&gt; main language ...........</tspan><tspan fill="#00e5ff"> Python</tspan></text>
+    <text x="470" y="94" fill="#2a86c4">&gt; languages (bytes of code)</text>
+    <rect x="470.0" y="106" width="177.9" height="12" fill="#00e5ff"/><rect x="647.9" y="106" width="88.1" height="12" fill="#3db8ff"/><rect x="736.0" y="106" width="64.3" height="12" fill="#7aa7ff"/><rect x="800.4" y="106" width="23.2" height="12" fill="#2a86c4"/><rect x="823.6" y="106" width="15.8" height="12" fill="#1d5f9a"/><rect x="839.4" y="106" width="24.6" height="12" fill="#16405f"/>
+    <rect x="470" y="141" width="12" height="12" fill="#00e5ff"/><text x="492" y="152" fill="#3db8ff">Python <tspan fill="#2a86c4">45.1%</tspan></text><rect x="670" y="141" width="12" height="12" fill="#3db8ff"/><text x="692" y="152" fill="#3db8ff">Java <tspan fill="#2a86c4">22.4%</tspan></text><rect x="470" y="171" width="12" height="12" fill="#7aa7ff"/><text x="492" y="182" fill="#3db8ff">C <tspan fill="#2a86c4">16.3%</tspan></text><rect x="670" y="171" width="12" height="12" fill="#2a86c4"/><text x="692" y="182" fill="#3db8ff">Assembly <tspan fill="#2a86c4">5.9%</tspan></text><rect x="470" y="201" width="12" height="12" fill="#1d5f9a"/><text x="492" y="212" fill="#3db8ff">Haskell <tspan fill="#2a86c4">4.0%</tspan></text><rect x="670" y="201" width="12" height="12" fill="#16405f"/><text x="692" y="212" fill="#3db8ff">Other <tspan fill="#2a86c4">6.2%</tspan></text>
+  </g>
+  <rect width="900" height="250" rx="12" fill="url(#scan)"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 56" width="900" height="56" role="img" aria-label="./stats --live">
+  <defs>
+    <filter id="glow-s" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan-s" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" fill-opacity="0.45"/>
+    </pattern>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#00e5ff" stop-opacity="0.9"/><stop offset="1" stop-color="#00e5ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .cur { animation: blink 1.05s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) { .cur { animation: none } }
+  </style>
+  <rect width="900" height="56" rx="10" fill="#02040a"/>
+  <rect x="1" y="1" width="898" height="54" rx="9" fill="none" stroke="#2a86c4" stroke-opacity="0.45"/>
+  <g font-family="ui-monospace, 'SFMono-Regular', 'DejaVu Sans Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" filter="url(#glow-s)" xml:space="preserve">
+    <text x="28" y="35"><tspan fill="#2a86c4">guest@guigalmesh:~$ </tspan><tspan fill="#00e5ff">./stats --live</tspan></text>
+    <rect class="cur" x="440.0" y="19" width="11" height="20" fill="#00e5ff"/>
+    <rect x="470.0" y="27" width="314.0" height="2" fill="url(#line)"/>
+    <text x="872" y="35" text-anchor="end" fill="#2a86c4" font-size="16">[ 03 ]</text>
+  </g>
+  <rect width="900" height="56" rx="10" fill="url(#scan-s)"/>
+</svg>

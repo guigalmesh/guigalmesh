@@ -1,0 +1,31 @@
+name: Update Stats Card
+
+# Rebuilds assets/stats.svg every day (and on demand from the Actions tab).
+on:
+  schedule:
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build stats card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/stats.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add assets/stats.svg
+          # Nothing to commit when the numbers didn't change
+          git commit -m "chore: auto-update stats card" || exit 0
+          git push
